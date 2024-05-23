@@ -18,9 +18,9 @@ const broncosGameRecords = [
 
 
 // 3. We have an array of drivers with various information. You'll be writing three functions:
-//findMatching- This function takes an array of drivers' names and a string as arguments, and returns the matching list of drivers. The function should be case insensitive.
-//fuzzyMatch - This function takes an array of drivers' names and a string as arguments for querying the array, and returns all drivers whose names begin with the provided letters.
-//matchName - This function takes an array of driver objects and a string as arguments. Each driver object has two properties: name and hometown. The function should return each element whose name property matches the provided string argument.
+  //findMatching- This function takes an array of drivers' names and a string as arguments, and returns the matching list of drivers. The function should be case insensitive.
+  //fuzzyMatch - This function takes an array of drivers' names and a string as arguments for querying the array, and returns all drivers whose names begin with the provided letters.
+  //matchName - This function takes an array of driver objects and a string as arguments. Each driver object has two properties: name and hometown. The function should return each element whose name property matches the provided string argument.
 
 const drivers = [
   { name: 'John Doe', hometown: 'New York' },
@@ -29,6 +29,37 @@ const drivers = [
   { name: 'Bob Williams', hometown: 'Houston' },
   { name: 'David Brown', hometown: 'Miami' }
 ];
+
+// 4. We just uploaded 10 coding tutorials online, but some of them have inconsistent casing. We want all the titles to be "title case", in other words, the first letter of each word should be capitalized. Create a new array containing the names of the tutorials with proper title case formatting. For example, 'what does the this keyword mean?' should become 'What Does The This Keyword Mean?'.Your job is to write the following function: titleCased(): returns an array with title case tutorial names. Note that this function takes no arguments and should use the global tutorials variable as data.
+
+const tutorials = [
+  "what does the this keyword mean?",
+  "What is the Constructor OO pattern?",
+  "implementing Blockchain Web API",
+  "The Test Driven Development Workflow",
+  "What is NaN and how Can we Check for it",
+  "What is the difference between stopPropagation and preventDefault?",
+  "Immutable State and Pure Functions",
+  "what is the difference between == and ===?",
+  "what is the difference between event capturing and bubbling?",
+  "what is JSONP?",
+];
+
+
+// 5. You are given an array of objects where each object represents a person with the properties name, age, and salary. Your task is to use the reduce method to perform various data manipulations and aggregations based on this array.
+   // - Define a variable totalSalary that stores the value the total salary of all people in the array.
+   // - Define a variable averageAge that stores the value the average age of all people in the array.
+   // - Write a custom reducer function that will calculate the total salary for people within the age range of 30-39.
+
+  const people = [
+    { name: 'Alice', age: 28, salary: 70000 },
+    { name: 'Bob', age: 35, salary: 85000 },
+    { name: 'Charlie', age: 30, salary: 60000 },
+    { name: 'David', age: 45, salary: 95000 },
+    { name: 'Eve', age: 25, salary: 50000 }
+  ];
+
+
 
 
 
