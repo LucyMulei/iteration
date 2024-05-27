@@ -60,13 +60,16 @@ const drivers = [
   { name: 'Bob Williams', hometown: 'Houston' },
   { name: 'David Brown', hometown: 'Miami' }
 ];
-function findMatching(){
+function findMatching(drivers ,name )
+{
+  //I could not figure this out for the life of me 
 
 }
 function fuzzyMatch(){
 
 }
-function matchName(){
+function matchName(drivers , name){
+   return drivers.filter(driver => driver.name === name);
 
 }
 
@@ -91,6 +94,10 @@ const tutorials = [
   "what is JSONP?",
 ];
 function titleCased(){
+   return tutorials.map(tutorial => {
+    return tutorial.replace(/\b\w/g, char => char.toUpperCase());
+  });
+}
 
 }
 
