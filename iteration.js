@@ -38,7 +38,8 @@ function superbowlWin(broncosGameRecords){
   }else{
     return undefined;
   };
-  Q: How to access the undefined part!!
+}
+  // Q: How to access the undefined part!!
 
 
 
@@ -60,16 +61,24 @@ const drivers = [
   { name: 'Bob Williams', hometown: 'Houston' },
   { name: 'David Brown', hometown: 'Miami' }
 ];
-function findMatching(drivers ,name )
+function findMatching(array , string )
 {
-  //I could not figure this out for the life of me 
+ return array.filter((driver)=>driver.name.toLowerCase() ===string.toLowerCase())
+
 
 }
-function fuzzyMatch(){
+function fuzzyMatch(array, string){
+  return array.filter((drivers)=> driver.name.split(''),slice(0,1)[0].toLowerCase()=== string.toLowerCase())
+}
+// alternarively
+function fuzzyMatch(array ,string){
+   return array.filter((driver)=>driver.name.toLowerCase().startsWith(string.toLowerCase()))
+
+
 
 }
-function matchName(drivers , name){
-   return drivers.filter(driver => driver.name === name);
+function matchName(drivers , string){
+   return drivers.filter(driver => driver.name === string);
 
 }
 
@@ -98,6 +107,13 @@ function titleCased(){
     return tutorial.replace(/\b\w/g, char => char.toUpperCase());
   });
 }
+function titleCased() {
+  return tutorials.map(tutorial => {
+    return tutorial.split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  });
+}
 
 }
 
@@ -122,7 +138,7 @@ function titleCased(){
 
  const totalSalary = people.reduce((acc,people) => acc + people.salary ,0);
 
- const averageAge = people.reduce ((acc, people)=> acc + people.age,0 )
+ const averageAge = people.reduce ((acc, people)=> acc + people.age,0 )/people.length
 
 const totalSalaryCertainAge = people.reduce ((acc, people)=> {
   if(people.age>=30 && people.age <=39 ){
